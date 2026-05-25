@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f37096f80172c46bed1c5686decc64, type: 3}
+  m_Name: FireballSkillData
+  m_EditorClassIdentifier: Assembly-CSharp::Noko.Data.FireballSkillData
+  activationType: 0
+  cooldown: 1.5
+  baseDamage: 15
+  range: 7
+  areaOfEffectRadius: 2
+  vfxPrefab: {fileID: 1390970239964818, guid: 1e410ee1c03555a44b7d83b23405c806, type: 3}
+  sfxClip: {fileID: 8300000, guid: 19c68675fb2f47c4780735bf9c76eb0a, type: 3}
+  explosionRadius: 2.5

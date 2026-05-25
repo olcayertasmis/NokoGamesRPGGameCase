@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1677a0fcb6296458471da5c506a552, type: 3}
+  m_Name: FreezeSkillData
+  m_EditorClassIdentifier: Assembly-CSharp::Noko.Data.FreezeSkillData
+  activationType: 0
+  cooldown: 10
+  baseDamage: 0
+  range: 6
+  areaOfEffectRadius: 4
+  vfxPrefab: {fileID: 176822597162087251, guid: 46009f57772e5e743bec9df57a49ed66, type: 3}
+  sfxClip: {fileID: 8300000, guid: 3bab8f02ed616e7479c2372edf3aba87, type: 3}
+  slowMultiplier: 0.2
+  slowDuration: 2
