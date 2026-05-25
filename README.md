@@ -5,6 +5,8 @@ This repository contains the prototype developed for the Noko Game Developer Tec
 ## Project Overview
 
 * **Development Time:** ~48 hours
+
+
 * **Unity Version:** 6000.3.10f1
 * **Platform:** Mobile
 
@@ -41,11 +43,8 @@ Due to the 48-hour development constraint, the focus was prioritized on MVP (Min
 ## Setup & Build Instructions
 
 1. **Environment:** Open this project using **Unity 6000.3.10f1**.
-2. **Scene:** Open the "CaseScene"
-
-
-
-
+2. **Scene:** Open the "CaseScene" from the `Scenes` folder.
+3. **Download Build:** You can download the latest Android build (APK) directly from this link: [Download Project Build](https://drive.google.com/drive/folders/15twKmVNqwPVFcsKd4zLMWq2GyLPefq3i?usp=sharing)
 
 ---
 
