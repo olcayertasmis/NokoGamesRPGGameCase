@@ -66,7 +66,7 @@ Due to the 48-hour development constraint, the focus was prioritized on MVP func
 2. **Scene:** Open the "CaseScene" from the `_CaseAssets` folder.
 
 
-3. **Download Build:** You can download the latest Android build (APK) directly from this link: [Download Project Build](https://www.google.com/search?q=https://drive.google.com/drive/folders/15twKmVNqwPVFcsKd4zLMWq2GyLPefq3i%3Fusp%3Dsharing)
+3. **Download Build:** You can download the latest Android build (APK) directly from this link: [Download Project Build](https://drive.google.com/drive/folders/15twKmVNqwPVFcsKd4zLMWq2GyLPefq3i?usp=drive_link)
 
 
 ---
