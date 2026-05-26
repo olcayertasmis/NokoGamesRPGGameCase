@@ -8,6 +8,8 @@ This repository contains the prototype developed for the Noko Game Developer Tec
 
 
 * **Unity Version:** 6000.3.10f1
+
+
 * **Platform:** Mobile
 
 
@@ -30,21 +32,42 @@ This repository contains the prototype developed for the Noko Game Developer Tec
 
 
 
-## Technical Assessment & Refinement Roadmap
+## Post-Prototype Refinements
 
-Due to the 48-hour development constraint, the focus was prioritized on MVP (Minimum Viable Product) functionality. The following areas have been identified for post-prototype refinement:
+Following the initial 48-hour development period, the following targeted refinements were implemented to ensure the project meets the desired quality standards:
 
-1. **Camera Jitter:** Minor jitter observed in follow logic. The system is scheduled for synchronization between `FixedUpdate` (physics) and camera tracking to ensure perfect fluidity.
-2. **Fireball Tracking:** The projectile movement logic is functional but requires further optimization for real-time dynamic target tracking.
-3. **Animation Polish:** Current animation state transitions are functional but require state-machine tuning for improved fluidity.
-4. **VFX/SFX & Game Feel:** The architecture is fully prepared for additional VFX/SFX integration. Core systems are in place, but advanced "juice" (camera shake, polish tweens) was deferred to prioritize core system stability.
-5. **Performance/Pooling:** While core pooling is implemented, extending the `ObjectPool` architecture to all project projectiles is planned for optimized memory management.
+* **Damage Scaling:** Fixed an issue where `Fireball` skill damage did not scale with `UpgradeManager` stats.
+
+
+
+## Technical Assessment & Roadmap
+
+Due to the 48-hour development constraint, the focus was prioritized on MVP functionality. The following areas are identified for further refinement:
+
+
+1. **Fireball Tracking:** Projectile movement requires further optimization for real-time dynamic target tracking.
+
+
+2. **Animation Polish:** State-machine tuning is required for improved transition fluidity.
+
+
+3. **VFX/SFX & Game Feel:** The architecture is fully prepared for additional VFX/SFX integration.
+
+
+4. **Performance/Pooling:** Extending the `ObjectPool` architecture to all projectiles is planned for optimized memory management.
+
+
 
 ## Setup & Build Instructions
 
 1. **Environment:** Open this project using **Unity 6000.3.10f1**.
-2. **Scene:** Open the "CaseScene" from the `Scenes` folder.
-3. **Download Build:** You can download the latest Android build (APK) directly from this link: [Download Project Build](https://drive.google.com/drive/folders/15twKmVNqwPVFcsKd4zLMWq2GyLPefq3i?usp=sharing)
+
+
+2. **Scene:** Open the "CaseScene" from the `_CaseAssets` folder.
+
+
+3. **Download Build:** You can download the latest Android build (APK) directly from this link: [Download Project Build](https://www.google.com/search?q=https://drive.google.com/drive/folders/15twKmVNqwPVFcsKd4zLMWq2GyLPefq3i%3Fusp%3Dsharing)
+
 
 ---
 
