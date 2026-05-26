@@ -12,6 +12,14 @@ namespace Noko.Skills.Mage
         private Collider[] _hitResults = new Collider[30];
         private bool _isCharging;
 
+        private IUpgradeProvider _upgradeProvider;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            _upgradeProvider = FindFirstObjectByType<UpgradeManager>();
+        }
+
         public override bool CanExecute(Vector3 casterPosition, Transform target)
         {
             return currentCooldown <= 0 && target && !_isCharging;
@@ -26,8 +34,10 @@ namespace Noko.Skills.Mage
         {
             _isCharging = true;
             TriggerCooldown();
-
             yield return new WaitForSeconds(0.4f);
+
+            float damageBonus = _upgradeProvider != null ? _upgradeProvider.GetUpgradeValue(UpgradeType.Damage) : 0f;
+            float finalDamage = FireballData.baseDamage + damageBonus;
 
             int hitCount = Physics.OverlapSphereNonAlloc(caster.position, FireballData.range, _hitResults);
             if (hitCount <= 0)
@@ -37,7 +47,6 @@ namespace Noko.Skills.Mage
             }
 
             PlaySFX(caster.position);
-
             for (int i = 0; i < hitCount; i++)
             {
                 if (_hitResults[i].TryGetComponent<IDamageable>(out var damageable) && damageable.IsAlive)
@@ -48,20 +57,19 @@ namespace Noko.Skills.Mage
 
                     if (FireballData.vfxPrefab) Instantiate(FireballData.vfxPrefab, skyPosition, lookDown);
 
-                    StartCoroutine(ApplyDamageAfterFall(damageable, caster.gameObject, 0.9f));
+                    StartCoroutine(ApplyDamageAfterFall(damageable, caster.gameObject, finalDamage, 0.9f));
                 }
             }
 
             _isCharging = false;
         }
 
-        private IEnumerator ApplyDamageAfterFall(IDamageable target, GameObject caster, float fallDuration)
+        private IEnumerator ApplyDamageAfterFall(IDamageable target, GameObject caster, float damage, float fallDuration)
         {
             yield return new WaitForSeconds(fallDuration);
-
             if (target != null && target.IsAlive)
             {
-                target.TakeDamage(FireballData.baseDamage, caster);
+                target.TakeDamage(damage, caster);
             }
         }
 
